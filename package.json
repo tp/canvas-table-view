@@ -1,0 +1,17 @@
+{
+  "name": "canvas-table-view",
+  "version": "0.1.0",
+  "main": "_compiled/src/index.js",
+  "author": "Timm Preetz <timm@preetz.us>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w --project .",
+    "server": "budo _compiled/src/index.js --live --title canvas-table-view"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.53",
+    "budo": "^9.4.7",
+    "lodash": "^4.17.4",
+    "typescript": "^2.2.1"
+  }
+}
