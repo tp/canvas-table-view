@@ -9,7 +9,7 @@
     "server": "budo _compiled/src/index.js --live --title canvas-table-view"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.53",
+    "@types/lodash": "^4.14.54",
     "budo": "^9.4.7",
     "lodash": "^4.17.4",
     "typescript": "^2.2.1"
