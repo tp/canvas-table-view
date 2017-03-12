@@ -168,7 +168,7 @@ canvas.addEventListener('wheel', (ev) => {
   scrollOffset = Math.max(0, Math.min(scrollOffset + ev.deltaY, MAX_SCROLL_OFFSET));
 
   requestAnimationFrame(() => draw());
-});
+}); // NOTE(tp): Chrome complains, wanting us to add `{passive:true}`. We could do so, because we don't make use of ev.preventDefault() in here (effectively cancelling the scroll), but this is currently only due to our body style. If we were to change that, or allow embedding into other contexts, we would need to cancel the scroll, whenever there is still potential for the table view to scroll
 
 canvas.addEventListener('click', (ev) => {
   ev.preventDefault()
@@ -272,5 +272,7 @@ document.body.addEventListener('keydown', (ev) => {
 
   requestAnimationFrame(() => draw());
 }, true);
+
+// TODO: Save cell before leaving
 
 requestAnimationFrame(() => draw());
